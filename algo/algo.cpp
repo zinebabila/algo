@@ -8,6 +8,31 @@
 #include <algorithm>
 #include <stack>
 using namespace std;
+void qst1() {
+	string c;
+	int a;
+	deque<string> dec;
+	list <string>lst;
+
+	cout << "donner le nombre de mots saisi\n";
+		cin >>a;
+   cout << "donner des mots\n";
+
+   for (int i = 0; i < a; i++) {
+	   cin >> c;
+	   dec.push_back(c);
+   }
+
+   for (auto c : dec)
+	   lst.push_back(c);
+
+  // lst.sort();
+   sort(lst.begin(), lst.end());
+   cout << "****************list trier*********************" << endl;
+   for (auto c : lst)
+	   cout << c << endl;
+   
+}
 
 template<class T>
 stack<T> Reverse_stack(stack<T> orj) {
@@ -41,34 +66,9 @@ void isPalindrome()
 }
 int main()
 {
-    string c;
-    int a;
-    deque<string> dec;
-    list <string>lst;
-    stack <char> sta;
-    /*
-    cout << "donner le nombre de mots saisi\n";
-        cin >>a;
-   cout << "donner des mots\n";
-  
-   for (int i = 0; i < a; i++) {
-       cin >> c;
-       dec.push_back(c);
-   }
-
-   for (auto c : dec)
-       lst.push_back(c);
-
-  // lst.sort();
-   sort(lst.begin(), lst.end());
-   cout << "****************list trier*********************" << endl;
-   for (auto c : lst)
-       cout << c << endl;
-   */
-
-  
-    
-
+	cout << "**************qst1***************\n";
+	qst1();
+	cout << "**************qst2***************\n";
 	isPalindrome();
     
     return 0;
