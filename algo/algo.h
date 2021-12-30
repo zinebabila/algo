@@ -115,3 +115,49 @@ void qst3(){
 	}
 
 }
+void repertoire1() {
+	list<string> lst;
+
+	string c;
+	int a;
+	cout << "donner le nombre de mots";
+	cin >> a;
+	for (int i = 0; i < a; i++) {
+		cin >> c;
+		lst.push_back(c);
+	}
+	list<string> lst1(lst.size());
+	transform(lst.begin(), lst.end(), lst1.begin(), [](string c) {for (int i = 0; i < c.size(); i++) {
+		if (c[i] == 'a' || c[i] == 'e' || c[i] == 'u' || c[i] == 'i' || c[i] == 'o' || c[i] == 'y')c[i] = '*';
+	}
+	return c;
+
+	cout << "************liste transformer**************";	                                                            });
+	for (auto i : lst1)
+		cout << i << endl;
+}
+void repertoire2() {
+	list<string> lst;
+	string c;
+	int a;
+	cout << "donner le nombre de mots";
+	cin >> a;
+	for (int i = 0; i < a; i++) {
+		cin >> c;
+		lst.push_back(c);
+	}
+	list<string> lst1(lst.size());
+	transform(lst.begin(), lst.end(), lst1.begin(), [](string c) {
+
+		for (int i = 0; i < c.size(); i++) {
+			c[i] = toupper(c[i]);
+		}
+		return c;
+		});
+
+	cout << "************liste transformer**************" << endl;
+	for (auto i : lst1)
+		cout << i << endl;
+
+}
+
